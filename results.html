@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Cadet College Kharan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Cadet College Kharan - Results Portal</h1>
+    </div>
+    
+    <div class="container">
+        <div class="class-selection">
+            <button class="class-btn" data-class="7">Class 7</button>
+            <button class="class-btn" data-class="8">Class 8</button>
+            <button class="class-btn" data-class="9">Class 9</button>
+        </div>
+        
+        <div id="entrySelection7" class="entry-selection">
+            <button class="entry-btn" data-entry="3">3rd Entry</button>
+        </div>
+        
+        <div id="entrySelection8" class="entry-selection">
+            <button class="entry-btn" data-entry="2">2nd Entry</button>
+        </div>
+        
+        <div id="entrySelection9" class="entry-selection">
+            <button class="entry-btn" data-entry="1">1st Entry</button>
+        </div>
+        
+        <!-- Class 7 - 3rd Entry Results -->
+        <div id="result7-3" class="result-container">
+            <div class="result-header">
+                <h2>Class 7 - 3rd Entry Results</h2>
+                <span id="selectedTerm7-3">First Term 2024</span>
+            </div>
+            
+            <div class="term-selection">
+                <button class="term-btn active" data-term="first">First Term 2024</button>
+            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>English</th>
+                        <th>Math</th>
+                        <th>Science</th>
+                        <th>Total</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>701</td>
+                        <td>Ali Khan</td>
+                        <td>85</td>
+                        <td>92</td>
+                        <td>88</td>
+                        <td>265</td>
+                        <td>1st</td>
+                    </tr>
+                    <!-- More rows can be added here -->
+                </tbody>
+            </table>
+            
+            <button class="back-btn">Back to Class Selection</button>
+        </div>
+        
+        <!-- Class 8 - 2nd Entry Results -->
+        <div id="result8-2" class="result-container">
+            <div class="result-header">
+                <h2>Class 8 - 2nd Entry Results</h2>
+                <span id="selectedTerm8-2">First Term 2024</span>
+            </div>
+            
+            <div class="term-selection">
+                <button class="term-btn active" data-term="first">First Term 2024</button>
+                <button class="term-btn" data-term="second">Second Term 2024</button>
+                <button class="term-btn" data-term="final">Final Term 2025</button>
+            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>English</th>
+                        <th>Math</th>
+                        <th>Science</th>
+                        <th>Total</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>801</td>
+                        <td>Ahmed Raza</td>
+                        <td>78</td>
+                        <td>85</td>
+                        <td>82</td>
+                        <td>245</td>
+                        <td>3rd</td>
+                    </tr>
+                    <!-- More rows can be added here -->
+                </tbody>
+            </table>
+            
+            <button class="back-btn">Back to Class Selection</button>
+        </div>
+        
+        <!-- Class 9 - 1st Entry Results -->
+        <div id="result9-1" class="result-container">
+            <div class="result-header">
+                <h2>Class 9 - 1st Entry Results</h2>
+                <span id="selectedTerm9-1">First Term 2024</span>
+            </div>
+            
+            <div class="term-selection">
+                <button class="term-btn active" data-term="first">First Term 2024</button>
+                <button class="term-btn" data-term="next">Next Term (After 2 Months)</button>
+            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>English</th>
+                        <th>Math</th>
+                        <th>Science</th>
+                        <th>Total</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>901</td>
+                        <td>Usman Ali</td>
+                        <td>90</td>
+                        <td>88</td>
+                        <td>92</td>
+                        <td>270</td>
+                        <td>1st</td>
+                    </tr>
+                    <!-- More rows can be added here -->
+                </tbody>
+            </table>
+            
+            <button class="back-btn">Back to Class Selection</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Class selection
+            const classButtons = document.querySelectorAll('.class-btn');
+            const entrySections = document.querySelectorAll('.entry-selection');
+            const resultContainers = document.querySelectorAll('.result-container');
+            
+            classButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const classNum = this.getAttribute('data-class');
+                    
+                    // Hide all entry selections and result containers
+                    entrySections.forEach(section => section.style.display = 'none');
+                    resultContainers.forEach(container => container.style.display = 'none');
+                    
+                    // Show the selected class's entry selection
+                    document.getElementById(`entrySelection${classNum}`).style.display = 'flex';
+                    
+                    // Highlight active class button
+                    classButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Entry selection
+            document.querySelectorAll('.entry-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const classNum = this.closest('.entry-selection').id.replace('entrySelection', '');
+                    const entryNum = this.getAttribute('data-entry');
+                    
+                    // Hide all result containers
+                    resultContainers.forEach(container => container.style.display = 'none');
+                    
+                    // Show the selected result container
+                    document.getElementById(`result${classNum}-${entryNum}`).style.display = 'block';
+                    
+                    // Highlight active entry button
+                    document.querySelectorAll('.entry-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Term selection
+            document.querySelectorAll('.term-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const containerId = this.closest('.result-container').id;
+                    const term = this.getAttribute('data-term');
+                    
+                    // Update the selected term display
+                    document.getElementById(`selectedTerm${containerId}`).textContent = 
+                        this.textContent;
+                    
+                    // Highlight active term button
+                    this.closest('.term-selection').querySelectorAll('.term-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Here you would typically fetch and display the results for the selected term
+                    console.log(`Loading ${term} term results for ${containerId}`);
+                });
+            });
+            
+            // Back button
+            document.querySelectorAll('.back-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Hide all result containers
+                    resultContainers.forEach(container => container.style.display = 'none');
+                    
+                    // Show class selection
+                    classButtons.forEach(btn => btn.classList.remove('active'));
+                    entrySections.forEach(section => section.style.display = 'none');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

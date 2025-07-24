@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Faculty - Cadet College Kharan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fculity.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/college-img.png" alt="Cadet College Kharan Logo">
+                <div class="logo-text">
+                    <h1>Cadet College Kharan</h1>
+                    <p>Excellence in Education and Character</p>
+                </div>
+            </div>
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fee.html">Fee</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="results.html">Result</a></li>
+                    <li><a href="downloads.html">Download</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="faculty-hero">
+        <div class="faculty-hero-content">
+            <h1>Our Distinguished Faculty</h1>
+            <p>Meet the dedicated educators and staff who shape future leaders at Cadet College Kharan</p>
+        </div>
+    </section>
+
+    <section class="faculty-section">
+        <div class="section-title">
+            <h2>Academic Leadership</h2>
+        </div>
+        
+        <div class="department-filter">
+            <button class="filter-btn active" data-filter="all">All Faculty</button>
+            <button class="filter-btn" data-filter="science">Science</button>
+            <button class="filter-btn" data-filter="humanities">Humanities</button>
+            <button class="filter-btn" data-filter="administration">Administration</button>
+        </div>
+        
+        <div class="faculty-grid">
+            <!-- Administrative Staff -->
+            <div class="faculty-card" data-dept="administration">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/cashier.jpg" alt="Mr. Charan" onerror="this.onerror=null;this.style.display='none';document.getElementById('cashier-placeholder').style.display='flex'">
+                    <div class="placeholder" id="cashier-placeholder">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Cashier Photo</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr Inzimam Ul Haq</h3>
+                    <span class="faculty-position">Cashier</span>
+                    <span class="faculty-department">Finance Department</span>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching Faculty -->
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/kb.jpg" alt="Mr. Khudabakhsh" onerror="this.onerror=null;this.style.display='none';document.getElementById('khudabakhsh-placeholder').style.display='flex'">
+                    <div class="placeholder" id="khudabakhsh-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>English Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Khudabakhsh</h3>
+                    <span class="faculty-position">Vice Principal / DOS</span>
+                    <span class="faculty-department">English (Gold Medalist)</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>LUAWMS</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/rafiq.jpg" alt="Mr. Muhammad Rafique" onerror="this.onerror=null;this.style.display='none';document.getElementById('rafiq-placeholder').style.display='flex'">
+                    <div class="placeholder" id="rafiq-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Islamiyat Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Muhammad Rafique</h3>
+                    <span class="faculty-position">House Master / Lecturer</span>
+                    <span class="faculty-department">Islamiyat</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/rafi ullah.jpg" alt="Mr. Rafi Ullah" onerror="this.onerror=null;this.style.display='none';document.getElementById('rafiullah-placeholder').style.display='flex'">
+                    <div class="placeholder" id="rafiullah-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Science Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Rafi Ullah</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Physics</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/saif ur rahman.jpg" alt="Mr. Saif Ur Rehman" onerror="this.onerror=null;this.style.display='none';document.getElementById('saif-placeholder').style.display='flex'">
+                    <div class="placeholder" id="saif-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Science Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Saif Ur Rehman</h3>
+                    <span class="faculty-position">Assistant House Master / Lecturer</span>
+                    <span class="faculty-department">Chemistry</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/naem.jpg" alt="Mr. Naeem" onerror="this.onerror=null;this.style.display='none';document.getElementById('naeem-placeholder').style.display='flex'">
+                    <div class="placeholder" id="naeem-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Science Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Naeem</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Physics</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/hammad.jpg" alt="Mr. Hammad" onerror="this.onerror=null;this.style.display='none';document.getElementById('hammad-placeholder').style.display='flex'">
+                    <div class="placeholder" id="hammad-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>English Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Hammad</h3>
+                    <span class="faculty-position">House Master / HOD / Lecturer</span>
+                    <span class="faculty-department">English</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/wali.jpg" alt="Mr. Muhammad Wali" onerror="this.onerror=null;this.style.display='none';document.getElementById('wali-placeholder').style.display='flex'">
+                    <div class="placeholder" id="wali-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Urdu Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Muhammad Wali</h3>
+                    <span class="faculty-position">HOD / Lecturer</span>
+                    <span class="faculty-department">Urdu</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/faisal.jpg" alt="Mr. Faisal" onerror="this.onerror=null;this.style.display='none';document.getElementById('faisal-placeholder').style.display='flex'">
+                    <div class="placeholder" id="faisal-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Science Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Faisal</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Biology</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/Gul ahmed.jpg" alt="Mr. Gul Ahmed" onerror="this.onerror=null;this.style.display='none';document.getElementById('gulahmed-placeholder').style.display='flex'">
+                    <div class="placeholder" id="gulahmed-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Computer Science Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Gul Ahmed</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Computer Science</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>COMSAT Abbottabad</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/aimal khan.jpg" alt="Mr. Aimal Khan" onerror="this.onerror=null;this.style.display='none';document.getElementById('aimal-placeholder').style.display='flex'">
+                    <div class="placeholder" id="aimal-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Mathematics Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Aimal Khan</h3>
+                    <span class="faculty-position">Lecturer / Assistant House Master</span>
+                    <span class="faculty-department">Mathematics</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/zia ur rehman.jpg" alt="Mr. Zia Ur Rehman" onerror="this.onerror=null;this.style.display='none';document.getElementById('zia-placeholder').style.display='flex'">
+                    <div class="placeholder" id="zia-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Support Staff</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Zia Ur Rehman</h3>
+                    <span class="faculty-position">Librarian</span>
+                    <span class="faculty-department">Library and Information Science</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/aurangzeb.jpg" alt="Mr. Aurangzeb" onerror="this.onerror=null;this.style.display='none';document.getElementById('aurangzeb-placeholder').style.display='flex'">
+                    <div class="placeholder" id="aurangzeb-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Chemistry Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Aurangzeb</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Chemistry</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>G.C University Faisalabad</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/mr kaleem ullah.jpg" alt="Mr. Kaleem Ullah" onerror="this.onerror=null;this.style.display='none';document.getElementById('kaleem-placeholder').style.display='flex'">
+                    <div class="placeholder" id="kaleem-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Mathematics Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Kaleem Ullah</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Mathematics</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>IIUI</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card" data-dept="humanities">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/irfan ullah.jpg" alt="Mr. Irfan Ullah" onerror="this.onerror=null;this.style.display='none';document.getElementById('irfan-placeholder').style.display='flex'">
+                    <div class="placeholder" id="irfan-placeholder">
+                        <i class="fas fa-book"></i>
+                        <span>Pak Studies Faculty</span>
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h3>Mr. Irfan Ullah</h3>
+                    <span class="faculty-position">Lecturer</span>
+                    <span class="faculty-department">Pak Studies</span>
+                    <div class="faculty-qualification">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>University of Balochistan</span>
+                    </div>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Faculty Member -->
+            <div class="faculty-card hidden" data-dept="administration">
+                <div class="faculty-img">
+                    <img src="./assets/faculty_images/nouman.jpg" alt="Capt Syed Nouman Fazal">
+                </div>
+                <div class="faculty-info">
+                    <h3>Capt Syed Nouman Fazal</h3>
+                    <span class="faculty-position">Adjutant</span>
+                    <div class="faculty-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Cadet College Kharan is a premier military institution in Balochistan dedicated to academic excellence and character development.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="results.html">Results</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Kharan, Balochistan</li>
+                    <li><i class="fas fa-phone"></i> +92 03334811390</li>
+                    <li><i class="fas fa-envelope"></i> cckn.edu.pk@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Cadet College Kharan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Faculty Filter Functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const facultyCards = document.querySelectorAll('.faculty-card:not(.hidden)');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', ()

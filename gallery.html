@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Gallery - Cadet College Kharan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="gallery.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/college-img.png" alt="Cadet College Kharan Logo">
+                Cadet College Kharan
+            </a>
+            
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html"><i ></i> Home</a></li>
+                <li><a href="about.html"><i ></i> About</a></li>
+                <li><a href="academics.html"><i ></i> Academics</a></li>
+                <li><a href="gallery.html" class="active"><i ></i> Gallery</a></li>
+                <li><a href="admissions.html"><i ></i> Admissions</a></li>
+                <li><a href="contact.html"><i ></i> Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Gallery Content -->
+    <div class="gallery-container">
+        <div class="gallery-header">
+            <h1>Campus Gallery</h1>
+            <p>Explore the vibrant life at Cadet College Kharan through our collection of memorable events and activities.</p>
+        </div>
+        
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="inauguration">Inauguration</button>
+            <button class="filter-btn" data-filter="visits">Visits</button>
+            <button class="filter-btn" data-filter="events">Special Events</button>
+            <button class="filter-btn" data-filter="academics">Academics</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="competitions">Competitions</button>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Inauguration Events -->
+            <div class="gallery-item" data-category="inauguration">
+                <img src="./assets/INAGURAL.jpg" class="gallery-img" alt="Inauguration Day">
+                <div class="gallery-caption">
+                    <h3>Inauguration Day</h3>
+                    <span class="date">Mar 2023</span>
+                </div>
+            </div>
+            
+            <!-- Religious Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/EID MILAD UN NABI.jpg" class="gallery-img" alt="Eid Milad Un Nabi">
+                <div class="gallery-caption">
+                    <h3>Eid Milad Un Nabi</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/LT GEN.jpg" class="gallery-img" alt="Lt Gen Qadir Baloch Visit">
+                <div class="gallery-caption">
+                    <h3>Lt Gen Qadir Baloch (R) Visit</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Sports Events -->
+            <div class="gallery-item" data-category="sports">
+                <img src="./assets/SPORT WEEK NOV 23.jpg" class="gallery-img" alt="Sports Week">
+                <div class="gallery-caption">
+                    <h3>Sports Week</h3>
+                    <span class="date">Nov 2023</span>
+                </div>
+            </div>
+            
+            <!-- National Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/IQBAL DAY.jpg" class="gallery-img" alt="Iqbal Day">
+                <div class="gallery-caption">
+                    <h3>Iqbal Day</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/APPOINBMENT.jpg" class="gallery-img" alt="Appointments visit">
+                <div class="gallery-caption">
+                    <h3>Appointments visit to CCN</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Club Activities -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/CLUB.jpg" class="gallery-img" alt="Club Activities">
+                <div class="gallery-caption">
+                    <h3>Club Activities</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Faculty Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/FACULITY.jpg" class="gallery-img" alt="Faculty Visit">
+                <div class="gallery-caption">
+                    <h3>Faculty Visit to Premier Institution</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Academics -->
+            <div class="gallery-item" data-category="academics">
+                <img src="./assets/WELL EQUIPED.jpg" class="gallery-img" alt="Science Lab">
+                <div class="gallery-caption">
+                    <h3>Well Equipped Science Lab</h3>
+                    <span class="date">2023</span>
+                </div>
+            </div>
+            
+            <!-- Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/cradle-img.jpg" class="gallery-img" alt="The Cradle">
+                <div class="gallery-caption">
+                    <h3>The Cradle</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/CMD KR.jpg" class="gallery-img" alt="Comdt KR Visit">
+                <div class="gallery-caption">
+                    <h3>Comdt KR Visit to CCKN</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Academics -->
+            <div class="gallery-item" data-category="academics">
+                <img src="./assets/ESTABLISH COM.jpg" class="gallery-img" alt="Computer Lab">
+                <div class="gallery-caption">
+                    <h3>Establishment of New Computer Lab</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Academics -->
+            <div class="gallery-item" data-category="academics">
+                <img src="./assets/SCIENCEEXE.jpg" class="gallery-img" alt="Science Exhibition">
+                <div class="gallery-caption">
+                    <h3>Participation in 1st Kharan Science Exhibition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/DOCUMENTRY.jpg" class="gallery-img" alt="Documentary Screening">
+                <div class="gallery-caption">
+                    <h3>Documentary Screening on the life of Allama Iqbal</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Sports -->
+            <div class="gallery-item" data-category="sports">
+                <img src="./assets/SPORT WEEK 2024.jpg" class="gallery-img" alt="Sports Week">
+                <div class="gallery-caption">
+                    <h3>Sports Week</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Competitions -->
+            <div class="gallery-item" data-category="competitions">
+                <img src="./assets/QUIZ COM.jpg" class="gallery-img" alt="Quiz Competition">
+                <div class="gallery-caption">
+                    <h3>Quiz Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Competitions -->
+            <div class="gallery-item" data-category="competitions">
+                <img src="./assets/ESSAY WRITING.jpg" class="gallery-img" alt="Essay Writing">
+                <div class="gallery-caption">
+                    <h3>Essay Writing Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Competitions -->
+            <div class="gallery-item" data-category="competitions">
+                <img src="./assets/SKETCH.jpg" class="gallery-img" alt="Sketching Competition">
+                <div class="gallery-caption">
+                    <h3>Sketching Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/IQBAL DAY 2024.jpg" class="gallery-img" alt="Iqbal Day">
+                <div class="gallery-caption">
+                    <h3>Iqbal Day</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Club Activities -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/CLUB ACT 7 DEC.jpg" class="gallery-img" alt="Club Activities">
+                <div class="gallery-caption">
+                    <h3>Club Activities</h3>
+                    <span class="date">7 Dec 2024</span>
+                </div>
+            </div>
+            
+            <!-- Academics -->
+            <div class="gallery-item" data-category="academics">
+                <img src="./assets/COACHING CLASS.jpg" class="gallery-img" alt="Coaching Classes">
+                <div class="gallery-caption">
+                    <h3>Coaching Classes</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Competitions -->
+            <div class="gallery-item" data-category="competitions">
+                <img src="./assets/CALLIGRAPHY.jpg" class="gallery-img" alt="Calligraphy Competition">
+                <div class="gallery-caption">
+                    <h3>Calligraphy/Sketching & Painting Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Sports -->
+            <div class="gallery-item" data-category="sports">
+                <img src="./assets/mil-img.jpg" class="gallery-img" alt="Cross Country">
+                <div class="gallery-caption">
+                    <h3>Cross Country Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Competitions -->
+            <div class="gallery-item" data-category="competitions">
+                <img src="./assets/Essay-stu.jpg" class="gallery-img" alt="Essay Writing">
+                <div class="gallery-caption">
+                    <h3>Essay Writing Competition</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Sports -->
+            <div class="gallery-item" data-category="sports">
+                <img src="./assets/sport-img.jpg" class="gallery-img" alt="Sports Fixture">
+                <div class="gallery-caption">
+                    <h3>Sports Fixture</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Events -->
+            <div class="gallery-item" data-category="events">
+                <img src="./assets/QUAID CELEB.jpg" class="gallery-img" alt="Quaid Day">
+                <div class="gallery-caption">
+                    <h3>Quaid Day Celebrations</h3>
+                    <span class="date">2024</span>
+                </div>
+            </div>
+            
+            <!-- Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/TRIP BY STUDENT.jpg.crdownload" class="gallery-img" alt="Excursion Trip">
+                <div class="gallery-caption">
+                    <h3>Excursion Trip by students ex FCPS Wsk to CCKN</h3>
+                    <span class="date">19-20 Apr 2025</span>
+                </div>
+            </div>
+            
+            <!-- Visits -->
+            <div class="gallery-item" data-category="visits">
+                <img src="./assets/UOB.jpg.crdownload" class="gallery-img" alt="University Visit">
+                <div class="gallery-caption">
+                    <h3>University of Balochistan Kharan Campus students visit</h3>
+                    <span class="date">2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close menu when clicking a link
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        }
+
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Initialize gallery - show all items
+            galleryItems.forEach(item => {
+                item.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - Cadet College Kharan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="download.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Cadet College Kharan Download Center</h1>
+        <p>Access important documents, forms, and resources</p>
+    </div>
+    
+    <div class="container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search documents...">
+        </div>
+        
+        <div class="category-tabs">
+            <button class="category-tab active" data-category="all">All Resources</button>
+            <button class="category-tab" data-category="admission">Admissions</button>
+            <button class="category-tab" data-category="academic">Academic</button>
+            <button class="category-tab" data-category="results">Results</button>
+            <button class="category-tab" data-category="forms">Forms</button>
+        </div>
+        
+        <div class="download-grid">
+            <!-- Admission Documents -->
+            <div class="download-card" data-category="admission">
+                <div class="download-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Admission Form 2024</h3>
+                <div class="download-meta">
+                    <span>PDF</span>
+                    <span>1.2 MB</span>
+                </div>
+                <p>Complete admission application form for new cadets. Includes instructions and requirements.</p>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> Download</a>
+            </div>
+            
+            <!-- Academic Documents -->
+            <div class="download-card" data-category="academic">
+                <div class="download-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Academic Calendar 2024</h3>
+                <div class="download-meta">
+                    <span>PDF</span>
+                    <span>2.4 MB</span>
+                </div>
+                <p>Complete schedule of academic activities, holidays, and examinations for the current year.</p>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> Download</a>
+            </div>
+            
+            <!-- Results Documents -->
+            <div class="download-card" data-category="results">
+                <div class="download-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Class 7 - First Term Results</h3>
+                <div class="download-meta">
+                    <span>PDF</span>
+                    <span>850 KB</span>
+                </div>
+                <p>Detailed results for Class 7 (3rd Entry) first term examinations 2024.</p>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> Download</a>
+            </div>
+            
+            <!-- Forms -->
+            <div class="download-card" data-category="forms">
+                <div class="download-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Leave Application Form</h3>
+                <div class="download-meta">
+                    <span>DOCX</span>
+                    <span>350 KB</span>
+                </div>
+                <p>Official form for requesting leave from college. Must be submitted 48 hours in advance.</p>
+                <a href="#" class="download-btn"><i class="fas fa-download"></i> Download</a>
+            </div>
+            <!-- More documents can be added following the same pattern -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category filtering
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const downloadCards = document.querySelectorAll('.download-card');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active tab
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter download cards
+                    downloadCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                downloadCards.forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
