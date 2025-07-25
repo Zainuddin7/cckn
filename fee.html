@@ -18,13 +18,16 @@
                     <h1>Cadet College Kharan</h1>
                 </div>
             </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="fee.html">Fee</a></li>
-                    <li><a href="faculity.html">faculty</a></li>
+                    <li><a href="faculity.html">Faculty</a></li>
                     <li><a href="results.html">Result</a></li>
-                    <li><a href="downloads.html">download</a></li>
+                    <li><a href="downloads.html">Download</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
@@ -162,55 +165,110 @@
             <p><strong>Important:</strong> No candidate will be taken on the roll of Cadet College Kharan without the paid receipt from the bank or a Bank draft. Cash/Cheque will not be accepted.</p>
         </div>
 
-        <button class="print-btn" onclick="window.print()">
+        <button class="print-btn">
             <i class="fas fa-print"></i> Print Fee Structure
         </button>
     </div>
 
-    <!-- Footer (Consistent with other pages) -->
     <!-- Footer -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-col">
-            <h3>About Us</h3>
-            <p>Cadet College Kharan is a premier military institution in Balochistan dedicated to academic excellence and character development since 2008.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Cadet College Kharan is a premier military institution in Balochistan dedicated to academic excellence and character development since 2008.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fee.html">Fee Structure</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="results.html">Result</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i>Kharan, Balochistan</li>
+                    <li><i class="fas fa-phone"></i> +92 03334811390</li>
+                    <li><i class="fas fa-envelope"></i> cckn.edu.pk@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</li>
+                </ul>
             </div>
         </div>
-        <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fee.html">Fee Structure</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="admission.html">Admissions</a></li>
-                <li><a href="results.html">Result</a></li>
-            </ul>
+        <div class="copyright">
+            <p>&copy; 2023 Cadet College Kharan. All Rights Reserved.</p>
         </div>
-        <div class="footer-col">
-            <h3>Contact Info</h3>
-            <ul class="contact-info">
-                <li><i class="fas fa-map-marker-alt"></i>Kharan, Balochistan</li>
-                <li><i class="fas fa-phone"></i> +92 03334811390</li>
-                <li><i class="fas fa-envelope"></i> cckn.edu.pk@gmail.com</li>
-                <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2023 Cadet College Kharan. All Rights Reserved.</p>
-    </div>
-</footer>
-
-
+    </footer>
     <script>
-        // Simple JavaScript for print functionality
-        document.querySelector('.print-btn').addEventListener('click', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.innerHTML = navList.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+    
+    // Print functionality
+    const printBtn = document.querySelector('.print-btn');
+    if (printBtn) {
+        printBtn.addEventListener('click', function() {
             window.print();
         });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Add animation to tables when they come into view
+    const observerOptions = {
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.fee-table').forEach(table => {
+        observer.observe(table);
+    });
+});       
     </script>
 </body>
 </html>
