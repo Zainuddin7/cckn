@@ -1,374 +1,498 @@
-        :root {
-            --primary: #1a3e72;
-            --secondary: #d4af37;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
+    :root {
+    --primary: #1a3e72;
+    --secondary: #d4af37;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            background-color: #f5f7fa;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    padding-top: 80px; /* Added to compensate for fixed header */
+}
 
-        /* Header (Consistent with other pages) */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 15px 5%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+/* Header */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Changed to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1001;
+}
 
-        .logo img {
-            height: 50px;
-        }
+.logo img {
+    height: 50px;
+}
 
-        .logo-text h1 {
-            color: white;
-            font-size: 1.3rem;
-            font-family: 'Montserrat', sans-serif;
-        }
+.logo-text h1 {
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
 
-        nav a:hover {
-            color: var(--secondary);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+}
 
-        /* Fee Hero Section */
-        .fee-hero {
-            background: linear-gradient(rgba(26, 62, 114, 0.8), rgba(26, 62, 114, 0.8)),
-                        url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80') center/cover;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
+nav a:hover {
+    color: var(--secondary);
+}
 
-        .fee-hero h1 {
-            font-size: 2.5rem;
-            font-family: 'Montserrat', sans-serif;
-        }
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+    color: white;
+}
 
-        /* Main Content */
-        .fee-container {
-            padding: 50px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.menu-toggle i {
+    font-size: 1.5rem;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 4px;
-            background: var(--secondary);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Fee Tables */
-        .fee-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .fee-table caption {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 15px;
-            text-align: left;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .fee-table th, .fee-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .fee-table th {
-            background-color: var(--primary);
-            color: white;
-            font-weight: 600;
-        }
-
-        .fee-table tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        .fee-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .fee-table tr:hover {
-            background-color: #e9f0f7;
-        }
-
-        .highlight {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        /* Payment Notice */
-        .payment-notice {
-            background-color: white;
-            border-left: 4px solid var(--secondary);
-            padding: 20px;
-            margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .payment-notice h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .payment-notice p {
-            margin-bottom: 10px;
-        }
-
-        .bank-details {
-            background-color: #f0f4f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-
-        .bank-details strong {
-            color: var(--primary);
-        }
-
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                font-size: 12pt;
-                color: black;
-            }
-
-            header, nav, .print-btn {
-                display: none;
-            }
-
-            .fee-table {
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
-
-            .fee-table th {
-                background-color: white !important;
-                color: black !important;
-                border-bottom: 2px solid #000;
-            }
-        }
-
-        /* Print Button */
-        .print-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .print-btn:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .fee-hero h1 {
-                font-size: 2rem;
-            }
-
-            .fee-table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
-
-        @media (max-width: 576px) {
-            nav ul {
-                gap: 15px;
-            }
-
-            .fee-table th, .fee-table td {
-                padding: 10px;
-                font-size: 0.9rem;
-            }
-        }
-        footer {
-        background: var(--primary);
-        color: white;
-        padding: 50px 5% 20px;
-        margin-top: 50px;
-        font-family: 'Poppins', sans-serif;
+/* Mobile Dropdown Menu */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Adjusted for mobile header */
     }
-
-    .footer-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
+    
+    .menu-toggle {
+        display: block;
     }
-
-    .footer-col h3 {
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.3rem;
-        margin-bottom: 25px;
-        position: relative;
-    }
-
-    .footer-col h3::after {
-        content: '';
+    
+    nav ul {
+        display: none;
         position: absolute;
-        width: 40px;
-        height: 3px;
-        background: var(--secondary);
-        bottom: -10px;
+        top: 100%;
         left: 0;
+        width: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
-
-    .footer-col p {
-        margin-bottom: 15px;
-        opacity: 0.8;
-        line-height: 1.7;
-    }
-
-    .footer-links {
-        list-style: none;
-    }
-
-    .footer-links li {
-        margin-bottom: 12px;
-    }
-
-    .footer-links a {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        transition: 0.3s;
-    }
-
-    .footer-links a:hover {
-        color: var(--secondary);
-        padding-left: 5px;
-    }
-
-    .contact-info {
-        list-style: none;
-    }
-
-    .contact-info li {
-        margin-bottom: 15px;
+    
+    nav ul.active {
         display: flex;
-        align-items: center;
-        gap: 10px;
     }
-
-    .contact-info i {
-        color: var(--secondary);
-        width: 20px;
+    
+    nav ul li {
+        width: 100%;
         text-align: center;
+        padding: 10px 0;
+    }
+    
+    nav ul li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* Fee Hero Section */
+.fee-hero {
+    background: linear-gradient(rgba(26, 62, 114, 0.8), rgba(26, 62, 114, 0.8)),
+                url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80') center/cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: -80px; /* Compensate for fixed header */
+    padding-top: 80px; /* Compensate for fixed header */
+}
+
+.fee-hero h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.fee-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.fee-container {
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background: var(--secondary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Fee Tables */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fee-table caption {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fee-table th, .fee-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.fee-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.fee-table tr:last-child td {
+    border-bottom: none;
+}
+
+.fee-table tr:hover {
+    background-color: #e9f0f7;
+}
+
+.highlight {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Payment Notice */
+.payment-notice {
+    background-color: white;
+    border-left: 4px solid var(--secondary);
+    padding: 20px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.payment-notice h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.payment-notice p {
+    margin-bottom: 10px;
+}
+
+.bank-details {
+    background-color: #f0f4f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.bank-details strong {
+    color: var(--primary);
+}
+
+/* Print Button */
+.print-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.print-btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.print-btn i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 50px 5% 20px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: var(--secondary);
+    bottom: -10px;
+    left: 0;
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--secondary);
+    width: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        font-size: 12pt;
+        color: black;
+        padding-top: 0;
     }
 
-    .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
+    header, nav, .print-btn, footer {
+        display: none;
     }
 
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
+    .fee-table {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .fee-table th {
+        background-color: white !important;
+        color: black !important;
+        border-bottom: 2px solid #000;
+    }
+    
+    .fee-hero {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .fee-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .fee-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
         height: 40px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        color: white;
-        transition: 0.3s;
     }
-
-    .social-links a:hover {
-        background: var(--secondary);
-        color: var(--primary);
-        transform: translateY(-3px);
+    
+    .logo-text h1 {
+        font-size: 1rem;
     }
-
-    .copyright {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .fee-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .fee-hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .fee-table th, .fee-table td {
+        padding: 10px;
         font-size: 0.9rem;
-        opacity: 0.7;
     }
-
-    @media (max-width: 768px) {
-        .footer-container {
-            gap: 30px;
-        }
+    
+    .print-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
+}
