@@ -467,4 +467,24 @@
             const facultyCards = document.querySelectorAll('.faculty-card:not(.hidden)');
             
             filterButtons.forEach(button => {
-                button.addEventListener('click', ()
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Show/Hide faculty cards based on filter
+                    facultyCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-dept') === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
